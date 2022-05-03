@@ -1,0 +1,3 @@
+export const START_JENKINS = 'START_JENKINS';
+export const START_JENKINS_FAILS = 'START_JENKINS_FAILS';
+

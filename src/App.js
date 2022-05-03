@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import {HashRouter , BrowserRouter, Route, Routes} from 'react-router-dom';
+import { ChakraProvider } from "@chakra-ui/react";
+import HomeScreen from './Screens/HomeScreen';
+import ImageScreen from './Screens/ImageScreen';
+import HtmlScreen from './Screens/HtmlScreen';
+import LogScreen from './Screens/LogScreen';
+import './index.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <ChakraProvider >
+    <BrowserRouter >
+    <Routes>
+    <Route path="/" element={<HomeScreen/>} exact></Route>
+    <Route path="/failedHtmlCode" element={<HtmlScreen/>} exact></Route>
+    <Route path="/failedImage" element={<ImageScreen/>} exact></Route>
+    <Route path="/logReport" element={<LogScreen/>} exact></Route>
+    </Routes>
+    </BrowserRouter >
+    </ChakraProvider>
+    </>
   );
 }
 

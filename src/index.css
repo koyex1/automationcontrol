@@ -1,13 +1,139 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+
+
+html{
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*, body{
+  font-size: 1.6rem;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+    font-weight: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  min-width: fit-content;
+}
+
+:root{
+  --firstColor: #353535;
+  --secondcolor: #3c6e71;
+  --thirdColor: #ffffff;
+  --fourthColor: #d9d9d9;
+  --fifthColor: #284b63;
+  --luckiest:   'Luckiest Guy', cursive;
+  --console: 'Courier Prime', monospace;
+
+
+}
+
+
+.Header>h1{
+ font-family: var(--luckiest);
+ color:var(--fourthColor);
+}
+.Header>p{
+  font-family: var(--luckiest);
+  color:var(--secondcolor);
+ }
+.mainPanel{
+  width: 100%;
+  display: flex;
+  height: 100vh;
+}
+.editorPanel{
+  width: 65%;
+  background-color: #353535;
+  }
+  .textAreaContainer{
+    height: 100%;
+  }
+.consoleSetupPanel{
+width: 35%;
+background-color: #353535;
+height: auto;
+}
+.setupPanel{
+  height: 30%;
+}
+.consoleHeader{
+  
+}
+.consolePanel{
+  height: 60%;
+  overflow-y:scroll;
+}
+.panelPadding{
+  padding: 0px 10px 0px 10px;
+}
+.consoleSetupHeader>h1{
+color:#d9d9d9
+}
+
+.setupRows{
+  display: flex;
+  
+}
+.setupRows2{
+  display: flex;
+  align-items: center;  
+}
+.setupRows>p{
+color: white;
+padding-left: 10px;
+}
+.setupRows>div{
+padding-top: 5px;
+
+}
+.setupRows2>h1{
+  font-family: var(--luckiest);
+  color: #3c6e71;
+  padding-left: 10px;
+}
+.pullPushWrapper{
+  padding-left: 10px;
+}
+.Input{
+  background-color: #ffffff;
+}
+
+
+.logMessages{
+  font-weight: bold;
+font-size: 15px;
+padding-bottom: 10px;
+font-family: var(--console);
+color: #a3aba1;
+}
+
+.reportsRow{
+  display: flex;
+}
+.reportsRow>div>img{
+  height: 15px;
+  width: 25px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.FailedText{
+color: red;
+font-weight: bold;
+font-size: 15px;
+padding-bottom: 10px;
+font-family: var(--console);
+}
+
+.PassedText{
+color: green;
+font-weight: bold;
+font-size: 15px;
+padding-bottom: 10px;
+font-family: var(--console);
 }
